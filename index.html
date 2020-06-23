@@ -1,0 +1,58 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lidocaine Syringe</title>
+    <link href="lidosyringe.css" rel='stylesheet' type=text/css>
+</head>
+<body>
+        <h1>LIDOCAINE SYRINGE PUMP CRI</h1>
+        <h3 id=top>Drug Concentration 10 or 20 mg/ml</h3>
+            <table>
+            <tbody>
+                <tr>
+                    <td><label for=weight>Animal's weight</label></td>
+                    <td><input type=number  id=weight required value='' placeholder=kg></td>
+                </tr>
+                <tr>
+                    <td><label for=loadingDoseRate>Loading Dose Rate (0.25-1 mg/kg)</label></td>   
+                    <td><input type="number"  id="loadingDoseRate" required value="" placeholder="mg/kg"></td>
+                </tr>
+                    <tr>
+                        <td><label for=drugCon>Drug Concentration</label></td>
+                        <td><input type=drugCon  id=drugCon required value='' placeholder=mg></td>
+                    </tr>
+                    <td></td>
+                    <td> <button onclick=lidoProcess() id='submitbutton'>Calculate</button></td>
+                </tr>
+            </tbody>
+            </table>
+                <div id="result"></div> 
+                <script src=lidosyringe.js></script>    
+    <div class='wrapper'>
+    <table>
+    <tbody>
+    <tr>
+        <td><label for=criDuration>CRI Duration</label></td>   
+        <td><input type="number"  id="criDuration" required value="" placeholder="hrs"></td>
+    </tr>
+    <tr>
+        <td> <label for=syringSize>Syringe Size</label></td>  
+        <td><input type="number"  id="syringSize" required value="" placeholder="ml"></td>
+    </tr>
+    <tr>
+        <td> <label for=lidocaine>Lidocaine</label></td>  
+        <td><input type="number"  id="lidocaine" required value="" placeholder="ml"></td>
+    </tr>
+<tr>
+        <td></td>
+        <td> <button onclick=lidoSyrProcess() id='submitbutton'>Calculate</button></td>
+    </tr>
+</tbody>
+</table>
+    <div id="result2"></div> 
+    <script src=lidosyringe.js></script>
+   
+</div> 
+</body>
+</html>
