@@ -7,10 +7,9 @@
 </head>
 <body>
     <header>
-        <h1>Lidocaine 10 or 20 mg/ml</h1>
-      <h3>Loading Dose <br>Analgesia <label>Dogs 1 mg/kg (avoid in cats)</label> <br>
-       Arrythmia<label>Dogs 2 - 8 mg/kg in 25% boluses</label>
-       Arrythmia<label>Cats 0.25 - 2 mg/kg in 25% boluses</label></h3>
+        <h1>Lidocaine in Dogs <span>(10 or 20 mg/ml)</span></h1>
+        <h3> Loading Dose <br>Analgesia <label>1 mg/kg</label> <br>
+       Arrythmia<label>2 - 8 mg/kg in 25% boluses</label></h3>
     </header>
             <table>
             <tbody>
@@ -31,16 +30,16 @@
                      </select></td>
                  </tr>                   
 
-                    <td></td>
+                    <td><button onclick="reload()" id='reloadButton'>Change Dose</button></td>
                     <td> <button onclick=lidoProcess() id='submitbutton'>Calculate</button></td>
                 </tr>
             </tbody>
             </table>
                 <div id="result"></div> 
+                <p id="error"></p>
                 <script src=lidosyringe.js></script>    
     <div class='wrapper'>
-        <h3>Dose Range <br>Arrythmia<label>Dogs 1.5 - 6 mg/kg/hr</label><br>
-        Arrythmia<label>Cats 0.6 - 2.4 mg/kg/hr</label></h3>
+        <h3>Dose Range <br>Arrythmia<label>1.5 - 6 mg/kg/hr</label><br></h3>
     <table>
     <tbody>
     <tr>
@@ -48,20 +47,27 @@
         <td><input type="number"  id="criDuration" required value="" placeholder="hr"></td>
     </tr>
     <tr>
-        <td> <label for=syringSize>Syringe Size (ml)</label></td>  
-        <td><input type="number"  id="syringSize" required value="" placeholder="ml"></td>
+        <td><label for='syringeSize'>Syringe Size (ml)</label></td>
+        <td><select id='syringeSize'>
+            <option value='5'>5 ml</option>
+            <option value='10'>10 ml</option>
+            <option value='20'>20 ml</option>
+            <option value='50'>50 ml</option>
+            <option value='60'>60 ml</option></td>
+        </select>
     </tr>
     <tr>
         <td> <label for=lidocaine>Dose Rate (mg/kg/hr)</label></td>  
         <td><input type="number"  id="lidocaine" required value="" placeholder="mg/kg/hr"></td>
     </tr>
 <tr>
-        <td></td>
+        <td><button onclick="refresh()" id='refreshButton'>Reset Value</button></td>
         <td> <button onclick=lidoSyrProcess() id='submitbutton'>Calculate</button></td>
     </tr>
 </tbody>
 </table>
     <div id="result2"></div> 
+    <p id="error2"></p>
     <script src=lidosyringe.js></script>
    
 </div> 
