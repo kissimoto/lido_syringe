@@ -15,11 +15,13 @@
             <tbody>
                 <tr>
                     <td><label for=weight>Animal weight (kg)</label></td>
-                    <td><input type=number  id=weight required value='' placeholder=kg></td>
+                    <td><input type=number id=weight min="0.01" step="0.01" 
+                        onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 46 && charCode > 31 && event.charCode >= 48 && event.charCode <= 57" required value='' placeholder=kg></td>
                 </tr>
                 <tr>
-                    <td><label for=loadingDoseRate>Loading Dose Rate (mg/kg)</label></td>   
-                    <td><input type="number"  id="loadingDoseRate" required value="" placeholder="0.25-1 mg/kg"></td>
+                 <td><label for=loadingDoseRate>Loading Dose Rate (mg/kg)</label></td>   
+                 <td><input type="number" id="loadingDoseRate" min="0.01" step="0.01" 
+                    onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 46 && charCode > 31 && event.charCode >= 48 && event.charCode <= 57" required value="" placeholder="0.25-1 mg/kg"></td>
                 </tr>
                 <tr>
                     <td> <label for="drugCon">Lidocaine Concentration (mg/ml)</label></td>
@@ -47,7 +49,8 @@
     <tbody>
     <tr>
         <td><label for=criDuration>CRI Duration (hr)</label></td>   
-        <td><input type="number"  id="criDuration" required value="" placeholder="hr"></td>
+        <td><input type="number" id="criDuration" min="0.01" step="0.01" 
+            onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 46 && charCode > 31 && event.charCode >= 48 && event.charCode <= 57" required value="" placeholder="hr"></td>
     </tr>
     <tr>
         <td><label for='syringeSize'>Syringe Size (ml)</label></td>
@@ -61,7 +64,8 @@
     </tr>
     <tr>
         <td> <label for=lidocaine>Dose Rate (mg/kg/hr)</label></td>  
-        <td><input type="number"  id="lidocaine" required value="" placeholder="mg/kg/hr"></td>
+        <td><input type="number" id="lidocaine" min="0.01" step="0.01" 
+            onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 46 && charCode > 31 && event.charCode >= 48 && event.charCode <= 57" required value="" placeholder="mg/kg/hr"></td>
     </tr>
 <tr>
         <td><button onclick="refresh()" id='refreshButton'>Clear All</button></td>
